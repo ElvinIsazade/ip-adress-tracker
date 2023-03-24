@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+  integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+  crossorigin=""/>
+  <link rel="stylesheet" href="../css/style.css">
+  
+  <title>IP Address Tracker</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="images/pattern-bg.png" alt="pattern">
+      <h1>Ip Adress Tracker</h1>
+      <form action="">
+        <input type="text" id="ip-search" placeholder="Search for any Ip Adress or domain">
+        <button class="sub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
+
+        </button>
+      </form>
+      <div class="ip_info">
+        <div class="info">
+          <p>Ip Adress</p>
+          <h2 class="ip_adress"></h2>
+        </div>
+        <div class="info">
+          <p>LOCATION</p>
+          <h2 class="location"></h2>
+        </div>
+        <div class="info">
+          <p>TIMEZONE</p>
+          <h2 class="utc"></h2>
+        </div>
+        <div class="info">
+          <p>ISP</p>
+          <h2 class="isp"></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="map">
+    
+  </div>
+  
+
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+ integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+ crossorigin=""></script>
+  <script src="script.js"></script>
+</body>
+</html>

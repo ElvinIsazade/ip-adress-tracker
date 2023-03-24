@@ -1,0 +1,103 @@
+.container{
+
+    .header{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    
+        
+        img{
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+            height: 400px;
+            object-fit: cover;
+        }
+        h1{
+            color: #fff;
+        }
+        form{
+            width: 501px;
+            margin-top: 40px;
+            display: flex;
+            #ip-search{
+                width: 100%;
+                padding: 15px 15px;
+                border-bottom-left-radius: 10px;
+                border-top-left-radius: 10px;
+                border: none;
+                outline: none;
+                font-size: 18px;
+                &::placeholder{
+                    color: $primary-color;
+                }
+            }
+            .sub{
+                width: 40px;
+                background-color: hsl(0, 0%, 17%);
+                border-bottom-right-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+        }
+        .ip_info{
+            // 170px
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            position: absolute;
+            top: 150px;
+            padding: 40px;
+            border-radius: 15px;
+            z-index: 9999;
+            opacity: 0;
+            animation-name: info;
+            animation-delay: 2s;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+            width: 700px;
+            .info{
+                padding: 0 10px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                row-gap: 13px;
+                p{
+                    color: $secondary-color;
+                }
+                h2{
+                    color: $primary-color;
+                }
+                &:nth-child(1){
+                    border-right: 1px solid $primary-color;
+                }
+                &:nth-child(2){
+                    border-right: 1px solid $primary-color;
+                }
+                &:nth-child(3){
+                    border-right: 1px solid $primary-color;
+                }
+            }
+        }
+        @keyframes info{
+            from{
+                top: 150px;
+            }
+            to{
+                top: 170px;
+            }
+        }
+    }
+}
+#map{
+    height: 480px;
+    margin-top: 133px;
+    
+}
